@@ -19,7 +19,7 @@ Succuss was measured as follows:  Given an image's true caption, the model is al
 This project draws inspiration and some design features from the keras project "Natural language image search with a Dual Encoder", located at https://keras.io/examples/vision/nl_image_search/.
 
 ## Project Structure
-- `data/`: Contains raw and processed data.
+- `data/`: Will contain raw and processed data.
 - `notebooks/`: Jupyter notebooks for exploration, model development, and visualization.
 - `src/`: Core scripts for preprocessing, training, and evaluating.
 - `models/`: Directory for saving trained models.
