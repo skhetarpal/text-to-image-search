@@ -13,7 +13,7 @@ During phase 1, we will circumvent the base models completely, dramatically redu
 During phase 2, we will use the original data to fine tune the entire dual encoder, including the base models.
 
 ## PERFORMANCE EVALUATION
-Succuss was measured as follows:  Given an image's true caption, the model is allowed to select %5 of images from the library.  If the correct image is amongst those selected, the inference is considered successful. Given this criteria, the model achieved 78% success after only 1 epoch of Phase 2 training.  This rate will likely go up if trained with more epochs.
+Succuss was measured as follows:  Given an image's true caption, the model is allowed to select 5% of images from the library.  If the correct image is amongst those selected, the inference is considered successful. Given this criteria, the model achieved 78% success after only 1 epoch of Phase 2 training.  This rate will likely go up if trained with more epochs.
 
 ### Note
 This project draws inspiration and some design features from the keras project "Natural language image search with a Dual Encoder", located at https://keras.io/examples/vision/nl_image_search/.
