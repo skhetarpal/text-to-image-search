@@ -1,0 +1,9 @@
+numpy
+pandas
+matplotlib
+torch
+torchvision
+transformers
+tqdm
+h5py 
+requests
