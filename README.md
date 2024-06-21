@@ -1,21 +1,21 @@
 # text-to-image-search
 
-INTRODUCTION
+## INTRODUCTION
 The goal of this project is to create a multi-modal machine learning tool that can receive a text description and then select from a library of images the image that most closely aligns with that description. The model architecture is a dual encoder that is trained to projects images and their descriptions onto the same space and at the same location. To serve as the base models of the dual encoder, we will use Inception V3 to encode the image data and BERT to encode the text data. On top of these base models will sit two small feedforward networks that will project the encoded images and text onto the common space where they will have the same dimensions. Let us call these two feedforward networks the "projection heads".
 
 Because training for this dual encoder is so time consuming, we will speed up the process by breaking the training process into two phases.
 
-TRAINING PHASES
-Phase 1:
+## TRAINING PHASES
+### Phase 1:
 During phase 1, we will circumvent the base models completely, dramatically reducing the iteration time as we tune the model. We will use the base models just once to encode the entire dataset, and then we will train the projection heads using just the pre-encoded data.
 
-Phase 2:
+### Phase 2:
 During phase 2, we will use the original data to fine tune the entire dual encoder, including the base models.
 
-PERFORMANCE EVALUATION:
+## PERFORMANCE EVALUATION
 Succuss was measured as follows:  Given an image's true caption, the model is allowed to select %5 of images from the library.  If the correct image is amongst those selected, the inference is considered successful. Given this criteria, the model achieved 78% success after only 1 epoch of Phase 2 training.  This rate will likely go up if trained with more epochs.
 
-Note
+### Note
 This project draws inspiration and some design features from the keras project "Natural language image search with a Dual Encoder", located at https://keras.io/examples/vision/nl_image_search/.
 
 ## Project Structure
