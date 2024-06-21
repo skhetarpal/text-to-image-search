@@ -1,8 +1,7 @@
 # text-to-image-search
-This project demonstrates the use of Inception and BERT models to transform image and caption data into embeddings, and then match these embeddings by projecting them onto a common space. The objective is to showcase the application of advanced AI techniques in handling multi-modal data.
 
 INTRODUCTION
-The goal of this project is to create a model that can receive a text description and then select from a library of images the image that most closely aligns with that description. The model architecture is a dual encoder that is trained to projects images and their descriptions onto the same space and at the same location. To serve as the base models of the dual encoder, we will use Inception V3 to encode the image data and BERT to encode the text data. On top of these base models will sit two small feedforward networks that will project the encoded images and text onto the common space where they will have the same dimensions. Let us call these two feedforward networks the "projection heads".
+The goal of this project is to create a multi-modal machine learning tool that can receive a text description and then select from a library of images the image that most closely aligns with that description. The model architecture is a dual encoder that is trained to projects images and their descriptions onto the same space and at the same location. To serve as the base models of the dual encoder, we will use Inception V3 to encode the image data and BERT to encode the text data. On top of these base models will sit two small feedforward networks that will project the encoded images and text onto the common space where they will have the same dimensions. Let us call these two feedforward networks the "projection heads".
 
 Because training for this dual encoder is so time consuming, we will speed up the process by breaking the training process into two phases.
 
